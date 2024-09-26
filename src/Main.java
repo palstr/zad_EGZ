@@ -22,7 +22,8 @@ public class Main {
         }
         return a;
     }
-        public static void main(String[] args) {
+
+    public static void main(String[] args) {
 
         Notatka notatka1 = new Notatka("Test", "Testowanie!");
         notatka1.wyswietlTytul();
@@ -41,11 +42,26 @@ public class Main {
         System.out.println("Wpisz drugą liczbę: ");
         int b = klawiatura.nextInt();
 
-        if(a<1 || b<1){
+        if (a < 1 || b < 1) {
             System.out.println("Niewłaściwe liczby!");
-        }
-        else {
+        } else {
             System.out.println("NWD dla wpisanych liczb wynosi " + obliczNWD(a, b));
         }
+
+        System.out.println("--------------------------");
+
+        Film film1 = new Film();
+        System.out.println("Wpisz nazwę filmu, który chcesz wypożyczyć.");
+
+        String wypozyczam = klawiatura.next();
+        film1.setTytulFilmu(wypozyczam);
+
+        System.out.println("Tytuł filmu: " + film1.getTytulFilmu());
+
+        System.out.println("Liczba wypożyczeń przed: " + film1.getLiczbaWypozyczen());
+        film1.wypozyczFilm();
+        System.out.println("Liczba wypożyczeń po: " + film1.getLiczbaWypozyczen());
+
+
     }
 }

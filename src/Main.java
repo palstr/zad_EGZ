@@ -1,5 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Notatka notatka1 = new Notatka("Test", "Testowanie!");
+        Notatka notatka2 = new Notatka("Dowidzenia", "Dzikoptak");
+
+        notatka1.wyswietlTytul();
+        notatka1.wypiszZawartosc();
+        notatka2.wyswietlTytul();
+        notatka2.wypiszZawartosc();
+
     }
 }

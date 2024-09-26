@@ -5,10 +5,10 @@ public class Main {
     public static int obliczNWD(int a, int b) {
         /**********
          * nazwa funkcji: obliczNWD
-         * opis funkcji: funkcja ta oblicza największy wspólny dzielnik dwóch wpisanych przez użytkownika liczb.
-         * parametry: a - przechowuje pierwszą wpisaną liczbę.
-         *            b - przechowuje drugą wpisaną liczbę.
-         * zwracany typ i opis: funkcja zwracja int'a będącego największym wspólnym dzielnikiem dwóch liczb.
+         * opis funkcji: funkcja ta oblicza największy wspólny dzielnik dwóch wpisanych przez użytkownika liczb metodą Euklidesa.
+         * parametry: a - przechowuje pierwszą wpisaną liczbę typu całkowitego.
+         *            b - przechowuje drugą wpisaną liczbę typu całkowitego.
+         * zwracany typ i opis: funkcja zwraca liczbę całkowitą będącą największym wspólnym dzielnikiem dwóch liczb.
          * autor: 00000000000
          * **********/
 
@@ -41,7 +41,11 @@ public class Main {
         System.out.println("Wpisz drugą liczbę: ");
         int b = klawiatura.nextInt();
 
+        if(a<1 || b<1){
+            System.out.println("Niewłaściwe liczby!");
+        }
+        else {
             System.out.println("NWD dla wpisanych liczb wynosi " + obliczNWD(a, b));
-
+        }
     }
 }
